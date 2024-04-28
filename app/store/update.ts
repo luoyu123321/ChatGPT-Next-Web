@@ -117,7 +117,7 @@ export const useUpdateStore = createPersistStore(
                         // Show a notification for the new version using Tauri
                         window.__TAURI__?.notification.sendNotification({
                           title: "NextChat",
-                          body: updateMessage,
+                          body: `${Locale.Settings.Update.IsLatest}`,
                           icon: `${ChatGptIcon.src}`,
                           sound: "Default",
                         });
