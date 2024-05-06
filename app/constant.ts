@@ -194,7 +194,7 @@ const anthropicModels = [
 // ] as const;
 export const DEFAULT_MODELS = [
   {
-    name:'gpt-3.5-turbo',
+    name:"gpt-3.5-turbo",
     available: true,
     provider: {
       id: "openai",
