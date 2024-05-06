@@ -163,35 +163,46 @@ const anthropicModels = [
   "claude-3-haiku-20240307",
 ];
 
+// export const DEFAULT_MODELS = [
+//   ...openaiModels.map((name) => ({
+//     name,
+//     available: true,
+//     provider: {
+//       id: "openai",
+//       providerName: "OpenAI",
+//       providerType: "openai",
+//     },
+//   })),
+//   ...googleModels.map((name) => ({
+//     name,
+//     available: true,
+//     provider: {
+//       id: "google",
+//       providerName: "Google",
+//       providerType: "google",
+//     },
+//   })),
+//   ...anthropicModels.map((name) => ({
+//     name,
+//     available: true,
+//     provider: {
+//       id: "anthropic",
+//       providerName: "Anthropic",
+//       providerType: "anthropic",
+//     },
+//   })),
+// ] as const;
 export const DEFAULT_MODELS = [
-  ...openaiModels.map((name) => ({
-    name,
+  {
+    name:"gpt-3.5-turbo",
     available: true,
     provider: {
       id: "openai",
       providerName: "OpenAI",
       providerType: "openai",
     },
-  })),
-  ...googleModels.map((name) => ({
-    name,
-    available: true,
-    provider: {
-      id: "google",
-      providerName: "Google",
-      providerType: "google",
-    },
-  })),
-  ...anthropicModels.map((name) => ({
-    name,
-    available: true,
-    provider: {
-      id: "anthropic",
-      providerName: "Anthropic",
-      providerType: "anthropic",
-    },
-  })),
-] as const;
+  }
+] as any;
 
 export const CHAT_PAGE_SIZE = 15;
 export const MAX_RENDER_MSG_COUNT = 45;

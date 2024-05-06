@@ -62,13 +62,13 @@ export const getServerSideConfig = () => {
   let customModels = process.env.CUSTOM_MODELS ?? "";
   let defaultModel = process.env.DEFAULT_MODEL ?? "";
 
-  if (disableGPT4) {
-    if (customModels) customModels += ",";
-    customModels += DEFAULT_MODELS.filter((m) => m.name.startsWith("gpt-4"))
-      .map((m) => "-" + m.name)
-      .join(",");
-    if (defaultModel.startsWith("gpt-4")) defaultModel = "";
-  }
+  // if (disableGPT4) {
+  //   if (customModels) customModels += ",";
+  //   customModels += DEFAULT_MODELS.filter((m) => m.name.startsWith("gpt-4"))
+  //     .map((m) => "-" + m.name)
+  //     .join(",");
+  //   if (defaultModel.startsWith("gpt-4")) defaultModel = "";
+  // }
 
   const isAzure = !!process.env.AZURE_URL;
   const isGoogle = !!process.env.GOOGLE_API_KEY;
