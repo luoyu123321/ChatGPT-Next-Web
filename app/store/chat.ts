@@ -1,3 +1,4 @@
+// @ts-ignore
 import { trimTopic, getMessageTextContent } from "../utils";
 
 import Locale, { getLang } from "../locales";
