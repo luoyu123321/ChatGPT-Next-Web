@@ -479,7 +479,7 @@ export function ChatActions(props: {
     if (isUnavaliableModel && models.length > 0) {
       // show next model to default model if exist
       let nextModel: ModelType = (
-        models.find((model) => model.isDefault) || models[0]
+        models.find((model:any) => model.isDefault) || models[0]
       ).name;
       chatStore.updateCurrentSession(
         (session) => (session.mask.modelConfig.model = nextModel),
