@@ -202,7 +202,7 @@ export const DEFAULT_MODELS = [
       providerType: "openai",
     },
   }
-] as const;
+] as any;
 
 export const CHAT_PAGE_SIZE = 15;
 export const MAX_RENDER_MSG_COUNT = 45;
